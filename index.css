@@ -1,0 +1,150 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    color: whitesmoke;
+    background-color: #0D1117;
+}
+
+
+
+h1, h2, h3, h4, p{
+    margin: 0;
+}
+
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #010409;
+}
+
+a:visited{
+    color: whitesmoke;
+}
+
+header > a{
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-left: 0.5em;
+    cursor: pointer;
+    transition: text-decoration 0.5s ease-out;
+    text-decoration: underline transparent;
+}
+
+header > a:after{
+    content:"./";
+    border-right: 5px solid whitesmoke;
+    animation: text-fade-in 4s forwards 1s;
+}
+
+@keyframes text-fade-in{
+    0%{
+        content: "./";
+    }
+    5%{
+        content: "./j";
+    }
+    10%{
+        content: "./jo";
+    }
+    15%{
+        content: "./jon";
+    }
+    20%{
+        content: "./jona";
+    }
+    25%{
+        content: "./jonat";
+    }
+    30%{
+        content: "./jonath";
+    }
+    35%{
+        content: "./jonatha";
+    }
+    40%{
+        content: "./jonathan";
+    }
+    45%{
+        content: "./jonathanm";
+        border-right: 5px solid whitesmoke;
+    }
+    50%{
+        content: "./jonathanmt";
+    }
+    55%{
+        content: "./jonathanmtz";
+    }
+    60%{
+        content: "./jonathanmtzc";
+        border-right: 5px solid whitesmoke;
+    }
+    75%{
+        content: "./jonathanmtzc.";
+    }
+    85%{
+        content: "./jonathanmtzc.dev";
+        border-right: 5px solid whitesmoke;
+    }
+    100%{
+        content: "./jonathanmtzc.dev";
+        border-right: none;
+    }
+}
+
+ul{
+    display: flex;
+    gap: 1em;
+    margin-right: 1em;
+    margin-left: auto;
+    list-style: none;
+}
+
+a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: text-decoration 0.5s ease-out;
+    text-decoration: underline transparent;
+}
+
+a:hover{
+    text-decoration-color: whitesmoke;
+}
+
+/* main */
+main{
+    height: 100%;
+    padding: 1em 1em;
+}
+
+/* sections */
+section{
+    height: 100%;
+}
+
+section:first-child{
+    padding-top: 3em;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+section:first-child > h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    white-space: pre;
+    line-height: 0.9;
+}
