@@ -136,15 +136,48 @@ section{
 }
 
 section:first-child{
-    padding-top: 3em;
     height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 5em;
+    padding: 3em 1em 0;
 }
 
-section:first-child > h1{
+.section-title > h1{
     font-size: 4.5rem;
     font-weight: 700;
     white-space: pre;
     line-height: 0.9;
+}
+
+.section-title > h2{
+    font-size: 3rem;
+    font-weight: 400;
+    white-space: pre;
+    line-height: 0.9;
+    margin-top: 0.25em;
+}
+
+.pfp{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    outline: 0 solid transparent;
+    transition: outline 0.25s ease;
+}
+
+.pfp:hover{
+    outline: 8px solid whitesmoke;
+}
+
+@media(max-width:1000px){
+    section:first-child{
+        flex-direction: column-reverse;
+        row-gap: 2em;
+    }
+    .section-title > h1, .section-title > h2{
+        white-space: normal;
+        text-align: center;
+    }
 }
