@@ -17,3 +17,23 @@ window.addEventListener("resize", () => {
         menuEl.style.display = "none"
     }
 })
+
+const linksArray = Array.prototype.slice.call(document.getElementsByTagName("a"))
+linksArray.forEach(link => {
+    link.addEventListener("click", event => {
+        event.preventDefault()
+        let sectionId = link.textContent
+            .toLowerCase()
+            .replace(" ","-")
+            .concat("-section")
+        if(sectionId === "-section"){
+            sectionId = "main-section"
+        }
+        const sectionEl = document.getElementById(sectionId)
+        const y = sectionEl.getBoundingClientRect().top + window.scrollY;
+        window.scroll({
+            top: y,
+            behavior: 'smooth'
+        });
+    })
+})
