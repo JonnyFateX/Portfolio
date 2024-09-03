@@ -1,4 +1,5 @@
 const projectsSectionEl = document.getElementById("projects-section")
+let debounceActive = false
 const pathToJson = "./projectData.json"
 fetch(pathToJson)
     .then(res => res.json())
@@ -7,7 +8,65 @@ fetch(pathToJson)
             const articleEl = getArticleElement(article)
             projectsSectionEl.innerHTML += articleEl
         })
+        initButtons()
     })
+
+function initButtons(){
+    const buttonContainers = Array.prototype.slice.call(document.getElementsByClassName("circle-button-container"))
+    buttonContainers.forEach((buttonContainer, containerIndex) => {
+        const circleButtons = Array.prototype.slice.call(buttonContainer.children)
+        circleButtons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                if(!debounceActive){
+                    imageSlideHandler(containerIndex, index, button)
+                }
+            })
+        })
+    })
+}
+
+function imageSlideHandler(containerIndex, index, buttonEl){
+    debounceActive = true
+    //button active
+    const activeButton = document.getElementsByClassName("button-active")
+    if(activeButton){
+        activeButton[0].classList = "circle-button"
+    }
+    buttonEl.classList = "circle-button button-active"
+    //image handling
+    const imagesInContainer = document
+        .getElementsByClassName("article-image-container")[containerIndex]
+        .getElementsByTagName("img")
+    let safe
+    for(let i = 0; i < imagesInContainer.length; i++){
+        if(imagesInContainer[i].classList[0]?.includes("animation") || !(imagesInContainer[i].classList[0])){
+            if(i === index){
+                return
+            }
+            if(index > i){
+                safe = true
+                imagesInContainer[i].classList = "slide-from-left-animation reverse-animation hidden"
+            }else{
+                imagesInContainer[i].classList = "slide-from-right-animation reverse-animation hidden"
+            }
+            
+            setTimeout(() => {
+                imagesInContainer[i].classList = "hidden"
+            }, 900)
+        }else{
+            imagesInContainer[i].classList = "hidden"
+        }
+    }
+    if(!safe){
+        imagesInContainer[index].classList = "slide-from-left-animation normal-animation"
+    }else{
+        imagesInContainer[index].classList = "slide-from-right-animation normal-animation"
+    }
+    setTimeout(() => {
+        imagesInContainer[index].classList = ""
+        debounceActive = false
+    }, 1000)
+}
 
 function getArticleElement(articleData){
     let utilities = articleData.utilities.join("  <strong>|</strong>  ")
