@@ -19,13 +19,13 @@
 
 .slide-from-right-animation{
     animation-name: slide-from-right;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
 
 .slide-from-left-animation{
     animation-name: slide-from-left;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
 
@@ -39,6 +39,6 @@
 
 .hidden{
     transition-property: opacity;
-    transition-delay: 0.9s;
+    transition-delay: 0.45s;
     opacity: 0;
 }

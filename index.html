@@ -60,7 +60,25 @@
         </section>
         <section id="contact-section">
             <h1>Contact</h1>
-            <div style="height:500px; width:100px"></div>
+            <form>
+                <label>
+                    Email
+                    <input type="text" autocomplete="false" name="email" placeholder="example@gmail.com">
+                </label>
+                <label>
+                    Name
+                    <input type="text" autocomplete="false" name="name" placeholder="Jonathan Martinez">
+                </label>
+                <label>
+                    Subject
+                    <input type="text" autocomplete="false" name="subject" placeholder="Example">
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="15"></textarea>
+                </label>
+                <button id="submit-button">Send</button>
+            </form>
         </section>
     </main>
     <script type="module" src="index.js"></script>

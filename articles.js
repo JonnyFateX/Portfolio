@@ -52,7 +52,7 @@ function imageSlideHandler(containerIndex, index, buttonEl){
             
             setTimeout(() => {
                 imagesInContainer[i].classList = "hidden"
-            }, 900)
+            }, 450)
         }else{
             imagesInContainer[i].classList = "hidden"
         }
@@ -65,7 +65,7 @@ function imageSlideHandler(containerIndex, index, buttonEl){
     setTimeout(() => {
         imagesInContainer[index].classList = ""
         debounceActive = false
-    }, 1000)
+    }, 500)
 }
 
 function getArticleElement(articleData){

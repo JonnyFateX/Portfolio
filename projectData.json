@@ -1,7 +1,7 @@
 [
     {
         "title": "MyAnimeRecommendations",
-        "content": "Anime app desgined to help you find your next watch. Powered by Firebase and data from MyAnimeList (MAL) API. Read about your chosen anime and find out where to stream it. Finally, save it to your watchlist so you don't forget about it.",
+        "content": "Anime app desgined to help you find your next watch. Powered with data from MyAnimeList (MAL) API. Read about your chosen anime and find out where to watch it. Finally, save it to your watchlist so you don't forget about it.",
         "utilities": ["React. js", "MAL API", "Firebase"],
         "githubUrl": "https://github.com/JonnyFateX/MyAnimeRecommendations",
         "websiteUrl": "https://myanimerecommendations.pages.dev/",
