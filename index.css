@@ -258,10 +258,19 @@ strong{
 .circle-button{
     height: 20px;
     width: 20px;
-    background-color: red;
+    background-color: #010409;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+.circle-button:hover{
+    background-color: rgb(25, 203, 235);
+}
+
+.button-active{
+    background-color: rgb(25, 203, 235)
 }
 
 h1{

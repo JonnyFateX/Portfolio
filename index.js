@@ -1,5 +1,6 @@
 const menuEl = document.getElementById("menu-list")
 const menuButtonEl = document.getElementById("menu-button")
+let debounceActive = false
 
 menuButtonEl.addEventListener("click", () => {
     if(!(menuEl.style.display) || menuEl.style.display === "none"){
@@ -52,11 +53,23 @@ const buttonContainers = Array.prototype.slice.call(document.getElementsByClassN
 buttonContainers.forEach((buttonContainer, containerIndex) => {
     const circleButtons = Array.prototype.slice.call(buttonContainer.children)
     circleButtons.forEach((button, index) => {
-        button.addEventListener("click", () => imageSlideHandler(containerIndex, index))
+        button.addEventListener("click", () => {
+            if(!debounceActive){
+                imageSlideHandler(containerIndex, index, button)
+            }
+        })
     })
 })
 
-function imageSlideHandler(containerIndex, index){
+function imageSlideHandler(containerIndex, index, buttonEl){
+    debounceActive = true
+    //button active
+    const activeButton = document.getElementsByClassName("button-active")
+    if(activeButton){
+        activeButton[0].classList = "circle-button"
+    }
+    buttonEl.classList = "circle-button button-active"
+    //image handling
     const imagesInContainer = document
         .getElementsByClassName("article-image-container")[containerIndex]
         .getElementsByTagName("img")
@@ -87,6 +100,7 @@ function imageSlideHandler(containerIndex, index){
     }
     setTimeout(() => {
         imagesInContainer[index].classList = ""
+        debounceActive = false
     }, 1000)
 }
 
