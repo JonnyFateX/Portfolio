@@ -48,6 +48,48 @@ linksArray.forEach(link => {
     })
 })
 
+const buttonContainers = Array.prototype.slice.call(document.getElementsByClassName("circle-button-container"))
+buttonContainers.forEach((buttonContainer, containerIndex) => {
+    const circleButtons = Array.prototype.slice.call(buttonContainer.children)
+    circleButtons.forEach((button, index) => {
+        button.addEventListener("click", () => imageSlideHandler(containerIndex, index))
+    })
+})
+
+function imageSlideHandler(containerIndex, index){
+    const imagesInContainer = document
+        .getElementsByClassName("article-image-container")[containerIndex]
+        .getElementsByTagName("img")
+    let safe
+    for(let i = 0; i < imagesInContainer.length; i++){
+        if(imagesInContainer[i].classList[0]?.includes("animation") || !(imagesInContainer[i].classList[0])){
+            if(i === index){
+                return
+            }
+            if(index > i){
+                safe = true
+                imagesInContainer[i].classList = "slide-from-left-animation reverse-animation hidden"
+            }else{
+                imagesInContainer[i].classList = "slide-from-right-animation reverse-animation hidden"
+            }
+            
+            setTimeout(() => {
+                imagesInContainer[i].classList = "hidden"
+            }, 900)
+        }else{
+            imagesInContainer[i].classList = "hidden"
+        }
+    }
+    if(!safe){
+        imagesInContainer[index].classList = "slide-from-left-animation normal-animation"
+    }else{
+        imagesInContainer[index].classList = "slide-from-right-animation normal-animation"
+    }
+    setTimeout(() => {
+        imagesInContainer[index].classList = ""
+    }, 1000)
+}
+
 document.querySelector('.html5').style.setProperty('--c','#E5532E');
 document.querySelector('.css3').style.setProperty('--c','#2D53E5');
 document.querySelector('.javascript').style.setProperty('--c','#F7E029');
