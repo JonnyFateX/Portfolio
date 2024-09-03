@@ -1,0 +1,155 @@
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #010409;
+}
+
+a:visited{
+    color: whitesmoke;
+}
+
+.header-title-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.header-title-container > a{
+    font-size: 1.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: text-decoration 0.5s ease-out;
+    text-decoration: underline transparent;
+}
+
+.header-title-container > a:after{
+    content:"./";
+    border-right: 5px solid whitesmoke;
+    animation: text-fade-in 4s forwards 1s;
+}
+
+@keyframes text-fade-in{
+    0%{
+        content: "./";
+    }
+    5%{
+        content: "./j";
+    }
+    10%{
+        content: "./jo";
+    }
+    15%{
+        content: "./jon";
+    }
+    20%{
+        content: "./jona";
+    }
+    25%{
+        content: "./jonat";
+    }
+    30%{
+        content: "./jonath";
+    }
+    35%{
+        content: "./jonatha";
+    }
+    40%{
+        content: "./jonathan";
+    }
+    45%{
+        content: "./jonathanm";
+        border-right: 5px solid whitesmoke;
+    }
+    50%{
+        content: "./jonathanmt";
+    }
+    55%{
+        content: "./jonathanmtz";
+    }
+    60%{
+        content: "./jonathanmtzc";
+        border-right: 5px solid whitesmoke;
+    }
+    75%{
+        content: "./jonathanmtzc.";
+    }
+    85%{
+        content: "./jonathanmtzc.dev";
+        border-right: 5px solid whitesmoke;
+    }
+    100%{
+        content: "./jonathanmtzc.dev";
+        border-right: none;
+    }
+}
+
+ul{
+    display: flex;
+    gap: 1em;
+    margin-right: 1em;
+    margin-left: auto;
+    list-style: none;
+}
+
+a{
+    font-size: 1.25rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: text-decoration 0.5s ease-out;
+    text-decoration: underline transparent;
+    text-wrap: nowrap;
+}
+
+a:hover{
+    text-decoration-color: whitesmoke;
+}
+
+.menu-button{
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-button > img{
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:600px){
+    .menu-button{
+        display: block;
+    }
+    header{
+        flex-direction: column;
+    }
+    .header-title-container{
+        padding: 0.5em 1em;
+    }
+    ul{
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid whitesmoke;
+        display: none;
+    }
+    li{
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        border-bottom: 1px solid whitesmoke;
+        padding: 0.875em 0;
+    }
+}

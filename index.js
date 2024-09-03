@@ -22,7 +22,7 @@ window.addEventListener("resize", () => {
 const linksArray = Array.prototype.slice.call(document.getElementsByTagName("a"))
 linksArray.forEach(link => {
     link.addEventListener("click", event => {
-        if(link.classList.contains("icon-link")){
+        if(link.classList.contains("icon-link") || link.classList.contains("article-link")){
             return
         }
         event.preventDefault()
