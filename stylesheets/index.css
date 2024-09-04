@@ -97,7 +97,7 @@ article{
     text-wrap: wrap;
     overflow-wrap: break-word;
     display: inline-block;
-    word-break: break-word;
+    word-break: break-all;
 }
 
 .article-info > p{
