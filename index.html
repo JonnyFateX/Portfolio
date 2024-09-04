@@ -60,28 +60,33 @@
         </section>
         <section id="contact-section">
             <h1>Contact</h1>
-            <form>
+            <form id="contact-form">
                 <label>
                     Email
                     <input type="text" autocomplete="false" name="email" placeholder="example@gmail.com">
                 </label>
+                <p class="tip-hidden">Please enter a valid email address.</p>
                 <label>
                     Name
                     <input type="text" autocomplete="false" name="name" placeholder="Jonathan Martinez">
                 </label>
+                <p class="tip-hidden">Please enter your name.</p>
                 <label>
                     Subject
                     <input type="text" autocomplete="false" name="subject" placeholder="Example">
                 </label>
+                <p class="tip-hidden">Please enter a subject.</p>
                 <label>
                     Message
                     <textarea name="message" rows="15"></textarea>
                 </label>
+                <p class="tip-hidden">Please enter your message.</p>
                 <button id="submit-button">Send</button>
             </form>
         </section>
     </main>
     <script type="module" src="index.js"></script>
     <script type="module" src="articles.js"></script>
+    <script type="module" src="form.js"></script>
   </body>
 </html>
