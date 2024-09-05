@@ -128,10 +128,12 @@ a:hover{
 }
 
 @media(max-width:600px){
-    .header-title-container > a{
+    .header-title-container > a, #menu-list > li > a{
+        color: whitesmoke;
         text-decoration: none;
     }
-    #menu-list > li > a{
+    .header-title-container > a:visited, #menu-list > li > a:visited{
+        color: whitesmoke;
         text-decoration: none;
     }
     .header-title-container > a:hover{
