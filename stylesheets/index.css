@@ -359,7 +359,7 @@ a > svg {
     .url > svg:hover{ 
         background-color: rgb(25, 203, 235);
     }
-  }
+}
 
 /* viewports */
 @media(max-width: 1250px){

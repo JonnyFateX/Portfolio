@@ -107,8 +107,12 @@ a{
     text-wrap: nowrap;
 }
 
-a:hover{
-    text-decoration-color: whitesmoke;
+
+
+@media (hover: hover) {
+    a:hover{
+        text-decoration-color: whitesmoke;
+    }
 }
 
 .menu-button{
