@@ -128,8 +128,17 @@ a:hover{
 }
 
 @media(max-width:600px){
-    a:hover{
-        text-decoration-color: #010409;
+    .header-title-container > a{
+        text-decoration: none;
+    }
+    #menu-list > li > a{
+        text-decoration: none;
+    }
+    .header-title-container > a:hover{
+        text-decoration: none;
+    }
+    #menu-list > li > a:hover{
+        text-decoration: none;
     }
     .menu-button{
         display: block;
