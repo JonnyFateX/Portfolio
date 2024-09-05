@@ -107,16 +107,8 @@ a{
     text-wrap: nowrap;
 }
 
-
-
-@media (hover: hover) {
-    .header-title-container > a:hover{
-        text-decoration-color: whitesmoke;
-    }
-
-    li > a:hover{
-        text-decoration-color: whitesmoke;
-    }
+a:hover{
+    text-decoration-color: whitesmoke;
 }
 
 .menu-button{
@@ -136,6 +128,9 @@ a{
 }
 
 @media(max-width:600px){
+    a:hover{
+        text-decoration-color: #010409;
+    }
     .menu-button{
         display: block;
     }
