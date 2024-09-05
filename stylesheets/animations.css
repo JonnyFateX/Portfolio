@@ -1,5 +1,5 @@
 /* slide animations */
-@keyframes slide-from-right{
+@keyframes slideInFromRight{
     0%{
         right: -100%;
     }
@@ -8,7 +8,16 @@
     }
 }
 
-@keyframes slide-from-left{
+@keyframes slideOutFromRight{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -100%;
+    }
+}
+
+@keyframes slideInFromLeft{
     0%{
         left: -100%;
     }
@@ -17,24 +26,33 @@
     }
 }
 
-.slide-from-right-animation{
-    animation: slide-from-right 0.5s ease-in-out;
-    -webkit-animation: slide-from-right 0.5s ease-in-out;
+@keyframes slideOutFromLeft{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
 }
 
-.slide-from-left-animation{
-    animation: slide-from-left 0.5s ease-in-out;
-    -webkit-animation: slide-from-left 0.5s ease-in-out;
+.slideInFromRight-animation{
+    animation: slideInFromRight 0.5s ease-in-out;
+    -webkit-animation: slideInFromRight 0.5s ease-in-out;
 }
 
-.normal-animation{
-    animation-direction: normal;
-    -webkit-animation-direction: normal;
+.slideOutFromRight-animation{
+    animation: slideOutFromRight 0.5s ease-in-out;
+    -webkit-animation: slideOutFromRight 0.5s ease-in-out;
 }
 
-.reverse-animation{
-    animation-direction: reverse;
-    -webkit-animation-direction: reverse;
+.slideInFromLeft-animation{
+    animation: slideInFromLeft 0.5s ease-in-out;
+    -webkit-animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+.slideOutFromLeft-animation{
+    animation: slideOutFromLeft 0.5s ease-in-out;
+    -webkit-animation: slideOutFromLeft 0.5s ease-in-out;
 }
 
 .hidden{

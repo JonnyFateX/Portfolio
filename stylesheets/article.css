@@ -95,15 +95,17 @@ article{
     transition: background-color 0.25s ease;
 }
 
-.circle-button:hover{
-    background-color: rgb(25, 203, 235);
-}
-
 .button-active{
     background-color: rgb(25, 203, 235)
 }
 
 /* viewports */
+@media(min-width: 600px){
+    .circle-button:hover{
+        background-color: rgb(25, 203, 235);
+    }
+}
+
 @media(max-width: 1250px){
     article{
         flex-direction: column;

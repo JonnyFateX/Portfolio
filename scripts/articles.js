@@ -1,74 +1,69 @@
 const projectsSectionEl = document.getElementById("projects-section")
-let debounceActive = false
 const pathToJson = "./projectData.json"
+let debounceActive = false
+
+const indexes = {}
+let indexesProxy
+
 fetch(pathToJson)
     .then(res => res.json())
     .then(json => {
-        json.forEach(article => {
-            const articleEl = getArticleElement(article)
+        json.forEach((article, index) => {
+            const articleEl = getArticleElement(article, index)
             projectsSectionEl.innerHTML += articleEl
         })
-        initButtons()
+        indexesProxy = createProxy()
+        initButtons(indexesProxy)
     })
 
-function initButtons(){
+function createProxy(){
+    return new Proxy(indexes, {
+        set: function (target, key, newValue) {
+            if(!target[key]){
+                target[key] = 0
+            } 
+            debounceActive = true
+            const imgContainer = document.getElementById(key)
+            const prevImage = imgContainer.getElementsByTagName("img")[target[key]]
+            const newImage = imgContainer.getElementsByTagName("img")[newValue]
+            const buttons = imgContainer.getElementsByTagName("button")
+            if(target[key] < newValue){
+                prevImage.classList = "slideOutFromLeft-animation hidden"
+                newImage.classList = "slideInFromRight-animation"
+            }else if(target[key] > newValue){
+                prevImage.classList = "slideOutFromRight-animation hidden"
+                newImage.classList = "slideInFromLeft-animation"
+            }
+            buttons[target[key]].classList = "circle-button"
+            buttons[newValue].classList = "circle-button button-active"
+            setTimeout(() => {
+                prevImage.classList = "hidden"
+                debounceActive = false
+            }, 450)
+    
+            target[key] = newValue
+            return true
+        }
+    })
+}
+
+function initButtons(proxy){
     const buttonContainers = Array.prototype.slice.call(document.getElementsByClassName("circle-button-container"))
     buttonContainers.forEach((buttonContainer, containerIndex) => {
         const circleButtons = Array.prototype.slice.call(buttonContainer.children)
         circleButtons.forEach((button, index) => {
             button.addEventListener("click", () => {
                 if(!debounceActive){
-                    imageSlideHandler(containerIndex, index, button)
+                    const key = "imgContainer" + (containerIndex + 1).toString()
+                    proxy[key] = index
                 }
             })
         })
     })
 }
 
-function imageSlideHandler(containerIndex, index, buttonEl){
-    debounceActive = true
-    //button active
-    const activeButton = document.getElementsByClassName("button-active")
-    if(activeButton){
-        activeButton[0].classList = "circle-button"
-    }
-    buttonEl.classList = "circle-button button-active"
-    //image handling
-    const imagesInContainer = document
-        .getElementsByClassName("article-image-container")[containerIndex]
-        .getElementsByTagName("img")
-    let safe
-    for(let i = 0; i < imagesInContainer.length; i++){
-        if(imagesInContainer[i].classList[0]?.includes("animation") || !(imagesInContainer[i].classList[0])){
-            if(i === index){
-                return
-            }
-            if(index > i){
-                safe = true
-                imagesInContainer[i].classList = "slide-from-left-animation reverse-animation hidden"
-            }else{
-                imagesInContainer[i].classList = "slide-from-right-animation reverse-animation hidden"
-            }
-            
-            setTimeout(() => {
-                imagesInContainer[i].classList = "hidden"
-            }, 450)
-        }else{
-            imagesInContainer[i].classList = "hidden"
-        }
-    }
-    if(!safe){
-        imagesInContainer[index].classList = "slide-from-left-animation normal-animation"
-    }else{
-        imagesInContainer[index].classList = "slide-from-right-animation normal-animation"
-    }
-    setTimeout(() => {
-        imagesInContainer[index].classList = ""
-        debounceActive = false
-    }, 500)
-}
 
-function getArticleElement(articleData){
+function getArticleElement(articleData, index){
     let utilities = articleData.utilities.join("  <strong>|</strong>  ")
     const article = 
     `
@@ -87,7 +82,7 @@ function getArticleElement(articleData){
                 </div>
                 
             </div>
-            <div class="article-image-container">
+            <div class="article-image-container" id="imgContainer${(index + 1)}">
                 <img class="" src="${articleData.images[0]}" alt="my anime recommendations welcome page">
                 <img class="hidden" src="${articleData.images[1]}" alt="anime card">
                 <img class="hidden" src="${articleData.images[2]}" alt="anime details card">
