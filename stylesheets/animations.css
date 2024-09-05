@@ -36,28 +36,28 @@
 }
 
 .slideInFromRight-animation{
-    animation: slideInFromRight 0.5s ease-in-out;
-    -webkit-animation: slideInFromRight 0.5s ease-in-out;
+    animation: slideInFromRight 0.8s ease-in-out;
+    -webkit-animation: slideInFromRight 0.8s ease-in-out;
 }
 
 .slideOutFromRight-animation{
-    animation: slideOutFromRight 0.5s ease-in-out;
-    -webkit-animation: slideOutFromRight 0.5s ease-in-out;
+    animation: slideOutFromRight 0.8s ease-in-out;
+    -webkit-animation: slideOutFromRight 0.8s ease-in-out;
 }
 
 .slideInFromLeft-animation{
-    animation: slideInFromLeft 0.5s ease-in-out;
-    -webkit-animation: slideInFromLeft 0.5s ease-in-out;
+    animation: slideInFromLeft 0.8s ease-in-out;
+    -webkit-animation: slideInFromLeft 0.8s ease-in-out;
 }
 
 .slideOutFromLeft-animation{
-    animation: slideOutFromLeft 0.5s ease-in-out;
-    -webkit-animation: slideOutFromLeft 0.5s ease-in-out;
+    animation: slideOutFromLeft 0.8s ease-in-out;
+    -webkit-animation: slideOutFromLeft 0.8s ease-in-out;
 }
 
 .hidden{
     transition-property: opacity;
-    transition-delay: 0.45s;
+    transition-delay: 0.75s;
     opacity: 0;
 }
 

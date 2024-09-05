@@ -1,6 +1,7 @@
 const projectsSectionEl = document.getElementById("projects-section")
 const pathToJson = "./projectData.json"
 let debounceActive = false
+let timer
 
 const indexes = {}
 let indexesProxy
@@ -14,6 +15,9 @@ fetch(pathToJson)
         })
         indexesProxy = createProxy()
         initButtons(indexesProxy)
+        timer = setTimeout(() => {
+            indexesProxy["imgContainer1"] = 1
+        }, 8000)
     })
 
 function createProxy(){
@@ -21,7 +25,7 @@ function createProxy(){
         set: function (target, key, newValue) {
             if(!target[key]){
                 target[key] = 0
-            } 
+            }
             debounceActive = true
             const imgContainer = document.getElementById(key)
             const prevImage = imgContainer.getElementsByTagName("img")[target[key]]
@@ -39,8 +43,20 @@ function createProxy(){
             setTimeout(() => {
                 prevImage.classList = "hidden"
                 debounceActive = false
-            }, 450)
+            }, 750)
+
+            if(timer){
+                clearTimeout(timer)
+            }
     
+            timer = setTimeout(() => {
+                if((target[key] + 1) > 2){
+                    indexesProxy[key] = 0
+                }else{
+                    indexesProxy[key]++
+                }    
+            }, 8000)
+
             target[key] = newValue
             return true
         }
