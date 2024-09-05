@@ -110,7 +110,11 @@ a{
 
 
 @media (hover: hover) {
-    a:hover{
+    .header-title-container > a:hover{
+        text-decoration-color: whitesmoke;
+    }
+
+    li > a:hover{
         text-decoration-color: whitesmoke;
     }
 }
