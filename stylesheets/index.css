@@ -246,6 +246,7 @@ textarea:focus{
     border-radius: 6px;
     transition: all 0.25s ease;
     cursor: pointer;
+    color: #010409;
 }
 #submit-button:hover{
     transform: scale(1.1);
