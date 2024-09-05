@@ -43,7 +43,7 @@ function createProxy(){
             setTimeout(() => {
                 prevImage.classList = "hidden"
                 debounceActive = false
-            }, 750)
+            }, 700)
 
             if(timer){
                 clearTimeout(timer)
