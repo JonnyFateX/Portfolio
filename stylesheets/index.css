@@ -70,6 +70,10 @@ section > h2{
     flex-direction: column;
 }
 
+#contact-section{
+    padding-top: 5em;
+}
+
 /* articles */
 #projects-section > article{
     align-self: center;
