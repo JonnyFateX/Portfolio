@@ -17,15 +17,11 @@ header{
     padding: 1em;
 }
 
-.header-title-container{
-    display: flex;
-}
-
 .header-title-container > a:after{
-    display: flex;
     content:"./";
     border-right: 5px solid whitesmoke;
     animation: text-fade-in 4s forwards 1s;
+    -webkit-animation: text-fade-in 4s forwards 1s;
 }
 
 ul{

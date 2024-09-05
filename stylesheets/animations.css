@@ -18,23 +18,23 @@
 }
 
 .slide-from-right-animation{
-    animation-name: slide-from-right;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+    animation: slide-from-right 0.5s ease-in-out;
+    -webkit-animation: slide-from-right 0.5s ease-in-out;
 }
 
 .slide-from-left-animation{
-    animation-name: slide-from-left;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+    animation: slide-from-left 0.5s ease-in-out;
+    -webkit-animation: slide-from-left 0.5s ease-in-out;
 }
 
 .normal-animation{
     animation-direction: normal;
+    -webkit-animation-direction: normal;
 }
 
 .reverse-animation{
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
 }
 
 .hidden{
