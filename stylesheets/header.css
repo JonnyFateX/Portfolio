@@ -18,11 +18,11 @@ header{
 }
 
 .header-title-container{
-    display: inline-block;
+    display: flex;
 }
 
 .header-title-container > a:after{
-    display: inline-block;
+    display: flex;
     content:"./";
     border-right: 5px solid whitesmoke;
     animation: text-fade-in 4s forwards 1s;
