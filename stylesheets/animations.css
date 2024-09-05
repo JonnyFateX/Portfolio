@@ -42,3 +42,68 @@
     transition-delay: 0.45s;
     opacity: 0;
 }
+
+/* skills animation */
+@keyframes color-in-out{
+    0%{fill: whitesmoke;}
+    20%{fill: var(--c);}
+    50%{fill: var(--c);}
+    70%{fill: whitesmoke;}
+    100%{fill: whitesmoke;}
+}
+
+/* title animation */
+@keyframes text-fade-in{
+    0%{
+        content: "./";
+    }
+    5%{
+        content: "./j";
+    }
+    10%{
+        content: "./jo";
+    }
+    15%{
+        content: "./jon";
+    }
+    20%{
+        content: "./jona";
+    }
+    25%{
+        content: "./jonat";
+    }
+    30%{
+        content: "./jonath";
+    }
+    35%{
+        content: "./jonatha";
+    }
+    40%{
+        content: "./jonathan";
+    }
+    45%{
+        content: "./jonathanm";
+        border-right: 5px solid whitesmoke;
+    }
+    50%{
+        content: "./jonathanmt";
+    }
+    55%{
+        content: "./jonathanmtz";
+    }
+    60%{
+        content: "./jonathanmtzc";
+        border-right: 5px solid whitesmoke;
+    }
+    75%{
+        content: "./jonathanmtzc.";
+    }
+    85%{
+        content: "./jonathanmtzc.dev";
+        border-right: 5px solid whitesmoke;
+    }
+    100%{
+        content: "./jonathanmtzc.dev";
+        border-right: none;
+    }
+}

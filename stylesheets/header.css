@@ -10,28 +10,11 @@ header{
     z-index: 10;
 }
 
-a:visited{
-    color: whitesmoke;
-}
-
-.header-title-container > a:visited, #menu-list > li > a:visited{
-    color: whitesmoke;
-    text-decoration: none;
-}
-
 .header-title-container{
     width: 100%;
     display: flex;
     align-items: center;
     padding: 1em;
-}
-
-.header-title-container > a{
-    font-size: 1.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: text-decoration 0.5s ease-out;
-    text-decoration: underline #010409;
 }
 
 .header-title-container > a:after{
@@ -40,80 +23,12 @@ a:visited{
     animation: text-fade-in 4s forwards 1s;
 }
 
-@keyframes text-fade-in{
-    0%{
-        content: "./";
-    }
-    5%{
-        content: "./j";
-    }
-    10%{
-        content: "./jo";
-    }
-    15%{
-        content: "./jon";
-    }
-    20%{
-        content: "./jona";
-    }
-    25%{
-        content: "./jonat";
-    }
-    30%{
-        content: "./jonath";
-    }
-    35%{
-        content: "./jonatha";
-    }
-    40%{
-        content: "./jonathan";
-    }
-    45%{
-        content: "./jonathanm";
-        border-right: 5px solid whitesmoke;
-    }
-    50%{
-        content: "./jonathanmt";
-    }
-    55%{
-        content: "./jonathanmtz";
-    }
-    60%{
-        content: "./jonathanmtzc";
-        border-right: 5px solid whitesmoke;
-    }
-    75%{
-        content: "./jonathanmtzc.";
-    }
-    85%{
-        content: "./jonathanmtzc.dev";
-        border-right: 5px solid whitesmoke;
-    }
-    100%{
-        content: "./jonathanmtzc.dev";
-        border-right: none;
-    }
-}
-
 ul{
     display: flex;
     gap: 1em;
     margin-right: 1em;
     margin-left: auto;
     list-style: none;
-}
-
-a{
-    font-size: 1.25rem;
-    font-weight: 300;
-    cursor: pointer;
-    transition: text-decoration 0.5s ease-out;
-    text-decoration: underline transparent;
-    text-wrap: nowrap;
-}
-
-a:hover{
-    text-decoration-color: whitesmoke;
 }
 
 .menu-button{
@@ -132,17 +47,7 @@ a:hover{
     height: 100%;
 }
 
-@media(max-width:600px){
-    .header-title-container > a, #menu-list > li > a{
-        color: whitesmoke;
-        text-decoration: none;
-    }
-    .header-title-container > a:hover{
-        text-decoration: none;
-    }
-    #menu-list > li > a:hover{
-        text-decoration: none;
-    }
+@media(max-width:700px){
     .menu-button{
         display: block;
     }

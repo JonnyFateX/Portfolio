@@ -11,7 +11,7 @@ menuButtonEl.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
     const width = window.innerWidth
-    if(width > 600){
+    if(width > 700){
         menuEl.style.display = "flex"
     }else{
         menuEl.style.display = "none"
