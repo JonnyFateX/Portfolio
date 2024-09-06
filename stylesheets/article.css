@@ -10,7 +10,7 @@ article{
     gap: 2em;
     margin-top: 2em;
     padding: 2em;
-    background-color: rgb(39, 42, 48);
+    background: linear-gradient(-60deg, rgb(44, 49, 58) 25%, rgb(14, 40, 93));
     border-radius: 12px;
 }
 

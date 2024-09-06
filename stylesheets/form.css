@@ -4,8 +4,8 @@ form{
     flex-direction: column;
     gap: 1em;
     margin-top: 2em;
-    padding: 2em;
-    background-color: rgb(39, 42, 48);
+    padding: 2.75em 2.75em 3em;
+    background: linear-gradient(0, rgb(36, 42, 52) 40%, rgb(11, 33, 77));
     border-radius: 12px;
 }
 
@@ -30,7 +30,7 @@ label{
 input[type=text], input[type=email]{
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid whitesmoke;
+    border-bottom: 3px solid rgb(206, 206, 206);
     font-size: 1.25rem;
     font-weight: 300;
     color: whitesmoke;
@@ -38,14 +38,9 @@ input[type=text], input[type=email]{
     border-radius: 0;
 }
 
-input[type=text]:hover, input[type=email]:hover{
+input[type=text]:hover, input[type=email]:hover, input[type=text]:focus, input[type=email]:focus{
     outline: none;
-    border-color: rgb(25, 203, 235);
-}
-
-input[type=text]:focus, input[type=email]:focus{
-    outline: none;
-    border-bottom: 3px solid rgb(25, 203, 235);
+    border-color: #eb9414;
 }
 
 /* textarea */
@@ -53,21 +48,16 @@ textarea{
     resize: none;
     border-radius: 6px;
     padding: 1em;
-    background-color: rgb(39, 42, 48);
+    background-color: rgb(36, 42, 52);
     color: whitesmoke;
     font-size: 1.25rem;
     font-weight: 300;
-    border: 1px solid whitesmoke;
+    border: 3px solid rgb(206, 206, 206);
 }
 
-textarea:hover{
+textarea:hover, textarea:focus{
     outline: none;
-    border-color: rgb(25, 203, 235);
-}
-
-textarea:focus{
-    outline: none;
-    border: 3px solid rgb(25, 203, 235);
+    border-color: #eb9414;
 }
 
 /* submit button */

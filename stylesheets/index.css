@@ -57,7 +57,7 @@ p{
 .paragraph-link{
     font-size: inherit;
     text-decoration: underline;
-    color: rgb(25, 203, 235);
+    color: #eb9414;
 }
 
 strong{
@@ -113,13 +113,16 @@ main{
     }
     a > svg:hover{
         transform: scale(1.2);
-        fill: rgb(25, 203, 235);
+        fill: #eb9414;
     }
     .url > svg:hover{ 
-        background-color: rgb(25, 203, 235);
+        background-color: #eb9414;
     }
     .pfp:hover{
         outline: 8px solid whitesmoke;
+    }
+    .paragraph-link:hover{
+        text-decoration-color: #eb9414;
     }
 }
 
