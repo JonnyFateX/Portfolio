@@ -6,20 +6,13 @@ section{
     margin-top: 2em;
 }
 
-.first-section{
-    height: 100dvh;
+section:first-child{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5em;
     padding: 0 1em;
-}
-
-section:first-child{
-    min-height: 100vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 section:last-child{
@@ -78,7 +71,7 @@ section:last-child{
 }
 
 @media(max-width:1000px){
-    .first-section{
+    section:first-child{
         flex-direction: column-reverse;
         row-gap: 2em;
     }
