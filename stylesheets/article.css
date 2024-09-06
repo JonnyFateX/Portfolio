@@ -26,7 +26,8 @@ article{
     word-break: break-word;
 }
 
-.article-info > p{
+.article-content{
+    margin-top: 0.5em;
     font-size: 1.25rem;
     text-decoration: none;
     color: rgb(208, 208, 208);
@@ -34,6 +35,7 @@ article{
 }
 
 .article-utilities{
+    margin-top: 1em;
     white-space: pre;
     text-wrap: wrap;
 }
@@ -55,7 +57,7 @@ article{
 }
 
 .article-links-container{
-    margin-top: auto;
+    margin-top: 2em;
     display: flex;
     gap: 1em;
 }
@@ -65,7 +67,6 @@ article{
 }
 
 .article-link > svg {
-    transform: scale(0.75);
     fill: whitesmoke;
     transition: fill 0.5s ease, transform 0.5s ease;
     border-radius: 50%;
@@ -111,7 +112,6 @@ article{
         flex-direction: column;
     }
     .article-links-container{
-        margin-top: 1em;
         justify-content: space-between;
     }
 }

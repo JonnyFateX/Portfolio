@@ -63,11 +63,11 @@
 
 /* skills animation */
 @keyframes color-in-out{
-    0%{fill: whitesmoke;}
-    20%{fill: var(--c);}
+    0%{fill: inherit;}
+    30%{fill: var(--c);}
     50%{fill: var(--c);}
-    70%{fill: whitesmoke;}
-    100%{fill: whitesmoke;}
+    70%{fill: var(--c);}
+    100%{fill: inherit;}
 }
 
 /* title animation */
