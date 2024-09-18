@@ -1,89 +1,10 @@
-/* sections */
 section{
-    min-height: 100vh;
-    width: 70%;
-    padding-top: 4.5em;
-    margin-top: 2em;
-}
-
-.first-section{
-    height: 100svh;
+    min-height: 100svh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-    padding: 0 1em;
+    flex-direction: column;
 }
 
 section:first-child{
-    min-height: 100vh;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-section:last-child{
-    padding-bottom: 3em;
-}
-
-.section-title{
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-
-.section-title > h2{
-    text-align: center;
-    text-wrap: nowrap;
-}
-
-#about-me-section > h2{
-    margin-top: 1.5em;
-}
-
-.skills-container{
-    margin-top: 3em;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 4em;
-    fill: rgb(112, 115, 139);
-}
-
-.skills-container > svg{
-    flex: 1 0 21%;
-    fill: rgb(112, 115, 139);
-    height: 100px;
-    width: 100px;
-    animation: color-in-out 5s infinite ease-in-out;
-}
-
-#projects-section{
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* viewports */
-@media(max-width: 1250px){
-    section{
-        width: 80%;
-    }
-}
-
-@media(max-width:550px){
-    section{
-        width: 90%;
-    }
-}
-
-@media(max-width:1000px){
-    .first-section{
-        flex-direction: column-reverse;
-        row-gap: 2em;
-    }
-    .section-title > h2{
-        text-wrap: wrap;
-    }
-}
-
