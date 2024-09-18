@@ -42,7 +42,9 @@ ul{
 .nav-logo:after{
     content:"./";
     /* animation: text-fade-in 8s forwards;
-    -webkit-animation: text-fade-in 8s forwards; */
+    -webkit-animation: text-fade-in 8s forwards;
+    -o-animation: text-fade-in 8s forwards;
+    -moz-animation: text-fade-in 8s forwards; */
 }
 
 #menu-button{

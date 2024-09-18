@@ -1,10 +1,20 @@
 section{
     min-height: 100svh;
     display: flex;
-    flex-direction: column;
+    padding: 1em;
 }
 
 section:first-child{
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    gap: 2em;
+}
+
+.section-title{
+    text-align: center;
+}
+
+.section-title > h2, .available-container > h3{
+    color: var(--subheading-color);
 }

@@ -1,110 +1,25 @@
 /* pulse */
 @keyframes pulse{
     0%{
-        background-color: transparent;
+        background-color: rgb(0, 170, 0);
+        border-color: var(--background-color);
     }
     20%{
-        background-color: rgba(18, 197, 18, 0.43);
+        background-color: rgb(0, 220, 0);
+        border-color: rgb(0, 125, 0);
     }
     30%{
-        background-color: rgba(18, 197, 18, 0.43);
+        background-color: rgb(0, 220, 0);
+        border-color: rgb(0, 125, 0);
     }
     50%{
-        background-color: transparent;
+        background-color: rgb(0, 170, 0);
+        border-color: var(--background-color);
     }
     100%{
-        background-color: transparent;
+        background-color: rgb(0, 170, 0);
+        border-color: var(--background-color);
     }
-}
-
-@keyframes pulseB{
-    0%{
-        opacity: 0.8;
-    }
-    20%{
-        opacity: 1;
-    }
-    30%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0.8;
-    }
-    100%{
-        opacity: 0.8;
-    }
-}
-
-/* slide animations */
-@keyframes slideInFromRight{
-    0%{
-        right: -100%;
-    }
-    100%{
-        right: 0;
-    }
-}
-
-@keyframes slideOutFromRight{
-    0%{
-        right: 0;
-    }
-    100%{
-        right: -100%;
-    }
-}
-
-@keyframes slideInFromLeft{
-    0%{
-        left: -100%;
-    }
-    100%{
-        left: 0;
-    }
-}
-
-@keyframes slideOutFromLeft{
-    0%{
-        left: 0;
-    }
-    100%{
-        left: -100%;
-    }
-}
-
-.slideInFromRight-animation{
-    animation: slideInFromRight 0.8s ease-in-out;
-    -webkit-animation: slideInFromRight 0.8s ease-in-out;
-}
-
-.slideOutFromRight-animation{
-    animation: slideOutFromRight 0.8s ease-in-out;
-    -webkit-animation: slideOutFromRight 0.8s ease-in-out;
-}
-
-.slideInFromLeft-animation{
-    animation: slideInFromLeft 0.8s ease-in-out;
-    -webkit-animation: slideInFromLeft 0.8s ease-in-out;
-}
-
-.slideOutFromLeft-animation{
-    animation: slideOutFromLeft 0.8s ease-in-out;
-    -webkit-animation: slideOutFromLeft 0.8s ease-in-out;
-}
-
-.hidden{
-    transition-property: opacity;
-    transition-delay: 0.70s;
-    opacity: 0;
-}
-
-/* skills animation */
-@keyframes color-in-out{
-    0%{fill: inherit;}
-    30%{fill: var(--c);}
-    50%{fill: var(--c);}
-    70%{fill: var(--c);}
-    100%{fill: inherit;}
 }
 
 /* title animation */
@@ -335,60 +250,5 @@
     100%{
         opacity: 1;
         content: "./jonathanmtzc.dev";
-    }
-}
-
-@-webkit-keyframes text-fade-in{
-    0%{
-        content: "./";
-    }
-    5%{
-        content: "./j";
-    }
-    10%{
-        content: "./jo";
-    }
-    15%{
-        content: "./jon";
-    }
-    20%{
-        content: "./jona";
-    }
-    25%{
-        content: "./jonat";
-    }
-    30%{
-        content: "./jonath";
-    }
-    35%{
-        content: "./jonatha";
-    }
-    40%{
-        content: "./jonathan";
-    }
-    45%{
-        content: "./jonathanm";
-        border-right: 5px solid whitesmoke;
-    }
-    50%{
-        content: "./jonathanmt";
-    }
-    55%{
-        content: "./jonathanmtz";
-    }
-    60%{
-        content: "./jonathanmtzc";
-        border-right: 5px solid whitesmoke;
-    }
-    75%{
-        content: "./jonathanmtzc.";
-    }
-    85%{
-        content: "./jonathanmtzc.dev";
-        border-right: 5px solid whitesmoke;
-    }
-    100%{
-        content: "./jonathanmtzc.dev";
-        border-right: none;
     }
 }
