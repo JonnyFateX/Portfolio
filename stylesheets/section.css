@@ -5,7 +5,7 @@ section{
 }
 
 section:first-child{
-    min-height: 100svh;
+    min-height: 100vh;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
@@ -17,9 +17,15 @@ section:first-child{
     text-align: center;
 }
 
-@media(min-width:900px){
+@media(min-width:950px){
     section:first-child{
         flex-direction: row;
         gap: 4em;
+    }
+}
+
+@media(max-width:700px){
+    section:first-child{
+        padding-top: 80px;
     }
 }

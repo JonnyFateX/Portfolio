@@ -32,6 +32,6 @@ function spinImg(){
     setTimeout(() => {
         index++
         pfpEl.src = getImgSrc()
-    }, 1200)
+    }, 2000)
 }
 

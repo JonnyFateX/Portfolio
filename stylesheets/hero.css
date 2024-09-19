@@ -1,0 +1,96 @@
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: auto 0;
+    transform: rotate(180deg);
+    animation: hero-up-down 12s ease infinite alternate;
+}
+
+@media(max-width: 899px){
+    .hero-container{
+        display: none;
+    }
+}
+
+.left-container{
+    left: -40px;
+}
+
+.right-container{
+    right: -40px;
+}
+
+.hero-arrow{
+    height: 80px;
+    width: 80px;
+}
+
+.hero-box{
+    height: 60px;
+    width: 60px;
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(45deg);
+    border: 5px solid var(--main-color);
+    background-color: var(--background-color);
+    opacity: 0.3;
+    animation: hero-box-animation 3s ease-in-out infinite alternate-reverse;
+}
+
+
+.hero-box:first-child{
+    bottom: 20px;
+    right: 20px;
+    left: unset;
+    transform: rotate(0deg);
+    opacity: 1;
+    animation: unset
+}
+
+.hero-box-dot{
+    height: 10px;
+    width: 10px;
+    display: flex;
+    margin: auto;
+    background-color: var(--main-color);
+}
+
+.hero-triangles-container{
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    transform: rotate(45deg);
+}
+
+.hero-triangle{
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 30px solid var(--main-color);
+    opacity: 0.15;
+    animation: triangle-glow 8s infinite 2s;
+}
+
+.triangle-top{
+    transform: rotate(180deg);
+    top: -60px;
+}
+.triangle-bottom{
+    transform: rotate(0deg);
+    bottom: -60px;
+}
+.triangle-right{
+    transform: rotate(-90deg);
+    right: -85px;
+    bottom: -15px;
+}
+.triangle-left{
+    transform: rotate(90deg);
+    left: -45px;
+    bottom: -15px;
+}
