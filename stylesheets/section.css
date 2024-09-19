@@ -1,14 +1,16 @@
 section{
-    min-height: 100svh;
     display: flex;
     padding: 1em;
+    overflow-x: hidden;
 }
 
 section:first-child{
+    min-height: 100svh;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     gap: 2em;
+    position: relative;
 }
 
 .section-title{

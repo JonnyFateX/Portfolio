@@ -7,7 +7,7 @@
 }
 
 :root{
-    --main-color: #2bfdbb;
+    --main-color: #1ce7a6;
     --background-color: #23002f;
     --text-color: #ffeee1;
     --subheading-color: #ffeee1b6;
@@ -16,12 +16,18 @@
     --header-background-color: #1d0027dc;
     --menu-background-color: #23002fa8;
     /* online */
-    --online-pulse-color: #00ffae;
-    --online-pulse-background: #006545;
-    --online-standby-color: #1fb988;
+    --online-pulse-color: #ea9bfe;
+    --online-pulse-background: #5e3d66;
+    --online-standby-color: #a570af;
     /* scrollbar */
     --scrollbar-background: #1d0027;
-    --scrollbar-color: #00ffaea7;
+    --scrollbar-color: #5e3d66;
+    /* hero */
+    --hero-color: #00ffae;
+    /* background pattern */
+    --honeyColor: #23002f;
+    --honeyBorderColor: #280035;
+    --size: 250px;
 }
 
 html{
@@ -34,7 +40,15 @@ html{
 }
 
 body{
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background:
+        radial-gradient(circle farthest-side at 0% 50%, var(--honeyColor) 23.5%,transparent 0)calc(var(--size)*0.7) var(--size),
+        radial-gradient(circle farthest-side at 0% 50%,var(--honeyBorderColor) 24%,transparent 0)calc(var(--size)*19/30) var(--size),
+        linear-gradient(var(--honeyColor) 14%,transparent 0, transparent 85%, var(--honeyColor) 0)0 0,
+        linear-gradient(150deg, var(--honeyColor) 24%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 26%,transparent 0,transparent 74%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 76%, var(--honeyColor) 0)0 0,
+        linear-gradient(30deg, var(--honeyColor) 24%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 26%,transparent 0,transparent 74%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 76%, var(--honeyColor) 0)0 0,
+        linear-gradient(90deg,var(--honeyBorderColor) 2%, var(--honeyColor) 0, var(--honeyColor) 98%,var(--honeyBorderColor) 0%)0 0 var(--honeyColor);
+        background-size:calc(var(--size)*4/3) calc(var(--size)*2);
     overflow: auto;
 }
 
@@ -101,14 +115,14 @@ h3{
 }
 
 .spin{
-    transform: rotateX(calc(360deg*10));
+    transform: rotate(calc(360deg*20));
 }
 
 /* online indicator */
 .online{
-    height: 14px;
-    width: 14px;
-    border: 3.8px solid var(--background-color);;
+    height: 18px;
+    width: 18px;
+    border: 4.8px solid var(--background-color);;
     display: inline-block;
     border-radius: 50%;
     animation: pulse 5s ease infinite;
@@ -116,4 +130,56 @@ h3{
     -o-animation: pulse 5s ease infinite;
     -moz-animation: pulse 5s ease infinite;
     margin-right: 8px;
+}
+
+/* heroes */
+.hero-1{
+    position: absolute;
+    left: 0%;
+    bottom: 10%;
+    color: var(--main-color);
+    font-size: 50px;
+    letter-spacing: 5px;
+    transform: rotate(90deg);
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    transform: rotate(180deg);
+    animation: hero-up-down 12000s ease infinite alternate;
+}
+
+@media(max-width: 750px){
+    .hero-container{
+        top: 22%;
+    }
+    .mobile-hidden{
+        display: none;
+    }
+}
+
+@keyframes hero-up-down{
+    0%{
+        transform: translateY(0) rotate(180deg) scale(1);
+    }
+    100%{
+        transform: translateY(0) rotate(180deg) scale(0.65);
+    }
+}
+
+
+.left-container{
+    left: -40px;
+}
+
+.right-container{
+    right: -40px;
+}
+
+.hero-2{
+    height: 80px;
+    width: 80px;
 }
