@@ -1,3 +1,4 @@
+const bodyEl = document.getElementsByTagName("body")[0]
 const menuButtonEl = document.getElementById("menu-button")
 const menuListEl = document.getElementById("menu-list")
 
@@ -22,3 +23,7 @@ menuListEl.addEventListener("click", () => {
         menuListEl.style.display = "none"
     }, 250)
 })
+
+setTimeout(() => {
+    bodyEl.style.overflowY = "auto"
+}, 8500)

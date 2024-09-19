@@ -7,21 +7,35 @@
 }
 
 :root{
-    --main-color: red;
-    --background-color: rgb(30, 30, 30);
-    --text-color: whitesmoke;
-    --subheading-color: rgba(245, 245, 245, 0.95);
+    --main-color: #2bfdbb;
+    --background-color: #23002f;
+    --text-color: #ffeee1;
+    --subheading-color: #ffeee1b6;
+    --outline-color: #D5C7BC;
     /* header */
-    --header-background-color: rgba(0, 0, 0, 0.2);
+    --header-background-color: #1d0027dc;
+    --menu-background-color: #23002fa8;
+    /* online */
+    --online-pulse-color: #00ffae;
+    --online-pulse-background: #006545;
+    --online-standby-color: #1fb988;
+    /* scrollbar */
+    --scrollbar-background: #1d0027;
+    --scrollbar-color: #00ffaea7;
 }
 
 html{
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-background);
+    scrollbar-width: thin;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 body{
     background-color: var(--background-color);
+    overflow: auto;
 }
 
 /* elements */
@@ -29,16 +43,19 @@ h1, h2, h3, h4, p, span{
     color: var(--text-color);
 }
 
+a{
+    font-size: 28px;
+}
+
 a, a:visited, a:active{
-    font-size: 1.25rem;
     text-decoration: underline;
     text-decoration-color: transparent;
-    color: var(--text-color);
+    color: var(--main-color);
     transition: text-decoration-color 0.25s ease;
 }
 
 a:hover{
-    text-decoration-color:  var(--text-color);
+    text-decoration-color:  var(--main-color);
 }
 
 h1{
@@ -57,6 +74,10 @@ h3{
     font-weight: 300;
 }
 
+.sub-heading{
+    color: var(--subheading-color);
+}
+
 /* pfp */
 .pfp{
     display: block;
@@ -65,11 +86,18 @@ h3{
     border-radius: 50%;
     outline: 6px solid transparent;
     transition: outline-color 0.5s ease, transform 4s ease;
-    z-index: -1;
+    cursor: pointer;
+}
+
+@media(min-width:900px){
+    .pfp{
+        height: 400px;
+        width: 400px;
+    }
 }
 
 .pfp:hover{
-    outline-color: whitesmoke;
+    outline-color: var(--outline-color);
 }
 
 .spin{
@@ -78,9 +106,8 @@ h3{
 
 /* online indicator */
 .online{
-    height: 16px;
-    width: 16px;
-    background-color: rgb(0, 170, 0);
+    height: 14px;
+    width: 14px;
     border: 3.8px solid var(--background-color);;
     display: inline-block;
     border-radius: 50%;

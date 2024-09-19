@@ -15,6 +15,9 @@ section:first-child{
     text-align: center;
 }
 
-.section-title > h2, .available-container > h3{
-    color: var(--subheading-color);
+@media(min-width:900px){
+    section:first-child{
+        flex-direction: row;
+        gap: 4em;
+    }
 }

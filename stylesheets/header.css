@@ -1,19 +1,21 @@
 header{
+    height: 80px;
     width: 100%;
     background-color: var(--header-background-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1em;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 }
 
 nav{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
 }
 
 ul{
@@ -29,28 +31,71 @@ ul{
     top: 0;
     left: 0;
     list-style-type: none;
-    background-color: rgba(0, 0, 0, 0.426);
-    backdrop-filter: blur(10px);
+    background-color: var(--menu-background-color);
+    backdrop-filter: blur(12px);
     opacity: 0;
     transition: opacity 0.25s ease;
 }
 
+li{
+    opacity: 1;
+    /*opacity: 0;*/
+    /*animation: fade-in 0.5s ease-in forwards 7.6s;
+    -webkit-animation: fade-in 0.5s ease-in forwards 7.6s;
+    -o-animation: fade-in 0.5s ease-in forwards 7.6s;
+    -moz-animation: fade-in 0.5s ease-in forwards 7.6s;*/
+}
+
 .nav-logo{
-    z-index: 100;
+    z-index: 11;
 }
 
 .nav-logo:after{
-    content:"./";
-    /* animation: text-fade-in 8s forwards;
+    content:"./jonathanmtzc.dev";
+    font-size: 32px;
+    /*animation: text-fade-in 8s forwards;
     -webkit-animation: text-fade-in 8s forwards;
     -o-animation: text-fade-in 8s forwards;
-    -moz-animation: text-fade-in 8s forwards; */
+    -moz-animation: text-fade-in 8s forwards;*/
 }
 
 #menu-button{
     display: inline-block;
     border: none;
     background-color: transparent;
-    z-index: 100;
     cursor: pointer;
+    z-index: 11;
+    border: 1px solid transparent;
+    padding-top: 5px;
+}
+
+@media(min-width:750px){
+    ul{
+        min-height: unset;
+        height: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: unset;
+        gap: 2em;
+        position: relative;
+        list-style-type: none;
+        background-color: unset;
+        backdrop-filter: unset;
+        opacity: 1;
+        transition: unset;
+    }
+
+    li > a{
+        font-size: 1.75rem;
+    }
+
+    li:first-child{
+        margin-left: auto;
+    }
+
+    #menu-button{
+        display: none;
+    }
 }

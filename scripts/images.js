@@ -1,14 +1,20 @@
 const pfpEl = document.getElementById("pfp")
+let animationActive = false
 let index = 0
 const imgSources = [
-    "./assets/killua_pfp.jpg",
+    "./assets/toge_pfp.jpg",
     "./assets/me_pfp.jpg",
 ]
 
-setTimeout(() => {
-    spinImg()
-    setInterval(() => spinImg(), 20000)
-}, 6000)
+pfpEl.addEventListener("click", () => {
+    if(!animationActive){
+        animationActive = true
+        spinImg()
+        setTimeout(() => {
+            animationActive = false
+        }, 4000)
+    }
+})
 
 function getImgSrc(){
     if(index >= imgSources.length){
@@ -28,3 +34,4 @@ function spinImg(){
         pfpEl.src = getImgSrc()
     }, 1200)
 }
+
