@@ -5,6 +5,9 @@
     margin: auto 0;
     transform: rotate(180deg);
     animation: hero-up-down 12s ease infinite alternate;
+    -moz-animation: hero-up-down 12s ease infinite alternate;
+    -o-animation: hero-up-down 12s ease infinite alternate;
+    -webkit-animation: hero-up-down 12s ease infinite alternate;
 }
 
 @media(max-width: 899px){
@@ -31,20 +34,81 @@
     width: 60px;
     display: flex;
     position: absolute;
-    bottom: 20%;
-    left: 15%;
+    top: 30%;
+    left: 12%;
     transform: rotate(45deg);
     border: 5px solid var(--main-color);
     background-color: var(--background-color);
-    opacity: 0.3;
-    animation: hero-box-animation 3s ease-in-out infinite alternate-reverse;
+    opacity: 0;
+    animation: hero-box-animation 10s ease-in-out infinite alternate-reverse;
+    -moz-animation: hero-box-animation 10s ease-in-out infinite alternate-reverse;
+    -o-animation: hero-box-animation 10s ease-in-out infinite alternate-reverse;
+    -moz-animation: hero-box-animation 10s ease-in-out infinite alternate-reverse;
 }
+
+.hero-position2{
+    top: 20%;
+    left: 75%;
+    animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    -o-animation-delay: 9s;
+    -webkit-animation-delay: 9s;
+}
+.hero-position3{
+    top: 15%;
+    left: 40%;
+    animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    -o-animation-delay: 7s;
+    -webkit-animation-delay: 7s;
+}
+.hero-position4{
+    top: 80%;
+    left: 88%;
+    animation-delay: 13s;
+    -moz-animation-delay: 13s;
+    -o-animation-delay: 13s;
+    -webkit-animation-delay: 13s;
+}
+.hero-position5{
+    top: 80%;
+    left: 30%;
+    animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+@media(max-width:900px){
+    .hero-position5{
+        animation: unset;
+        -moz-animation: unset;
+        -webkit-animation: unset;
+        -o-animation: unset;
+    }
+    .hero-position3{
+        animation: unset;
+        -moz-animation: unset;
+        -webkit-animation: unset;
+        -o-animation: unset;
+    }
+}
+
+@media(max-width:600px){
+    .hero-box{
+        animation: unset;
+        -moz-animation: unset;
+        -webkit-animation: unset;
+        -o-animation: unset;
+    }
+}
+
 
 
 .hero-box:first-child{
     bottom: 20px;
     right: 20px;
     left: unset;
+    top: unset;
     transform: rotate(0deg);
     opacity: 1;
     animation: unset
@@ -72,8 +136,11 @@
 	border-left: 20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top: 30px solid var(--main-color);
-    opacity: 0.15;
-    animation: triangle-glow 8s infinite 2s;
+    opacity: 0;
+    animation: triangle-glow 8s infinite 3s;
+    -webkit-animation: triangle-glow 8s infinite 3s;
+    -o-animation: triangle-glow 8s infinite 3s;
+    -moz-animation: triangle-glow 8s infinite 3s;
 }
 
 .triangle-top{

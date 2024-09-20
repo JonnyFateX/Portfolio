@@ -268,7 +268,7 @@
 /* hero */
 @keyframes triangle-glow{
     0%{
-        opacity: 0.15;
+        opacity: 0;
     }
     10%{
         opacity: 0.9;
@@ -277,16 +277,16 @@
         opacity: 0.9;
     }
     40%{
-        opacity:0.35;
+        opacity:0.15;
     }
-    50%{
+    55%{
         opacity:0.9;
     }
     70%{
-        opacity: 0.15;
+        opacity: 0;
     }
     100%{
-        opacity: 0.15;
+        opacity: 0;
     }
 }
 
@@ -295,8 +295,12 @@
         opacity: 0.9;
         transform: rotate(45deg) translate();
     }
+    40%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 30px);
+    }
     100%{
-        opacity: 0.3;
+        opacity: 0;
         transform: rotate(45deg) translate(20px, 30px);
     }
 }
