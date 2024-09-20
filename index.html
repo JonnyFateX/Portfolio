@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./stylesheets/section.css">
     <link rel="stylesheet" href="./stylesheets/hero.css">
     <link rel="stylesheet" href="./stylesheets/animations.css">
+    <link rel="stylesheet" href="./carroussel-files/splide.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -20,11 +21,11 @@
   <body>
     <header>
         <nav>
-            <a href="/" class="nav-logo"></a>
+            <a href="/#" class="nav-logo nav-link"></a>
             <ul id="menu-list">
-                <li><a href="/about-me">about</a></li>
-                <li><a href="/projects">projects</a></li>
-                <li><a href="/contact">contact</a></li>
+                <li><a class="nav-link" href="/#about">about</a></li>
+                <li><a class="nav-link" href="/#projects">projects</a></li>
+                <li><a class="nav-link" href="/#contact">contact</a></li>
             </ul>
         </nav>
         <button id="menu-button">
@@ -92,18 +93,65 @@
                     </span>
                 </span>
             </span>
-            <!-- <div class="hero-triangles-container">
-                <span class="hero-triangle triangle-top"></span>
-                <span class="hero-triangle triangle-bottom"></span>
-                <span class="hero-triangle triangle-right"></span>
-                <span class="hero-triangle triangle-left"></span>
-            </div> -->
         </section>
-        <section>
+        <section id="about" class="section">
+            <h1 class="about-header">About</h1>
+            <p class="about-paragraph">
+                Hello, it's me Jonathan. 
+                <br>
+                My passion consists in creating apps that make life easier and more bearable. I love integrating visually appealing elements to raw functionality. Nothing is more important to me than solving problems and helping to solve your own. Finally, I'm always open to new opportunities, feel free to reach out to me for work or collaborations!
+                <br>
+                <br>
+                Have you tried clicking the image above this? Yes, that's me.
+            </p>
+            <div class="splide carroussel" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list" loading="auto">
+                        <li class="splide__slide"><img src="./assets/icons/firebase.svg" alt="Firebase icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/flutter.svg" alt="Flutter icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/dart.svg" alt="Dart icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/javascript.svg" alt="Javascript icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/react.svg" alt="React js icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/git.svg" alt="Git icon"></li>
+                        <li class="splide__slide"><img src="./assets/icons/typescript.svg" alt="Typescript icon"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h1 class="projects-header">Projects</h1>
+        </section>
+        <section id="contact" class="section">
 
         </section>
     </main>
     <script type="module" src="./scripts/index.js"></script>
     <script type="module" src="./scripts/images.js"></script>
+    <script src="./carroussel-files/splide.min.js"></script>
+    <script>
+        document.addEventListener( 'DOMContentLoaded', function() {
+            let splide = new Splide('.splide', {
+                type: 'loop',
+                perPage: 5,
+                perMove: 1,
+                arrows: false,
+                interval: 5000,
+                autoplay: true,
+                pagination: false,
+                easing: "ease",
+                mediaQuery: 'max',
+                breakpoints: {
+                    550:{
+                        perPage: 3,
+                    },
+                    1300:{
+                        perPage: 4,
+                    }
+                },
+                speed: 800,
+            })
+            splide.mount()
+        })
+    </script>
   </body>
 </html>

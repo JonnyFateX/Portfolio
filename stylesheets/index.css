@@ -65,7 +65,7 @@ a{
     font-size: 28px;
 }
 
-@media(max-width:749px){
+@media(max-width:750px){
     a{
         font-size: 42px;
     }
@@ -96,6 +96,10 @@ h2{
 h3{
     font-size: 1.5rem;
     font-weight: 300;
+}
+
+p{
+    font-size: 1.5rem;
 }
 
 .sub-heading{

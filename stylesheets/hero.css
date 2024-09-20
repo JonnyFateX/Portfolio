@@ -78,7 +78,7 @@
     -o-animation-delay: 4s;
     -webkit-animation-delay: 4s;
 }
-@media(max-width:900px){
+@media(max-width:950px){
     .hero-position5{
         animation: unset;
         -moz-animation: unset;
@@ -101,8 +101,6 @@
         -o-animation: unset;
     }
 }
-
-
 
 .hero-box:first-child{
     bottom: 20px;
@@ -161,3 +159,11 @@
     left: -45px;
     bottom: -15px;
 }
+/*
+<div class="hero-triangles-container">
+    <span class="hero-triangle triangle-top"></span>
+    <span class="hero-triangle triangle-bottom"></span>
+    <span class="hero-triangle triangle-right"></span>
+    <span class="hero-triangle triangle-left"></span>
+</div>
+*/

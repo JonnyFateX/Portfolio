@@ -18,7 +18,7 @@ nav{
     justify-content: space-between;
 }
 
-ul{
+#menu-list{
     min-height: 100svh;
     height: 100%;
     width: 100%;
@@ -37,7 +37,7 @@ ul{
     transition: opacity 0.25s ease;
 }
 
-li{
+#menu-list > li{
     opacity: 1;
     /*opacity: 0;*/
     /*animation: fade-in 0.5s ease-in forwards 7.6s;
@@ -70,7 +70,7 @@ li{
 }
 
 @media(min-width:750px){
-    ul{
+    #menu-list{
         min-height: unset;
         height: unset;
         width: 100%;
@@ -87,11 +87,11 @@ li{
         transition: unset;
     }
 
-    li > a{
+    #menu-list > li > a{
         font-size: 1.75rem;
     }
 
-    li:first-child{
+    #menu-list > li:first-child{
         margin-left: auto;
     }
 
