@@ -34,7 +34,6 @@ section:first-child{
 .section{
     display: flex;
     flex-direction: column;
-    justify-content: start;
     padding: 0;
 }
 @media(min-width:600px){
@@ -48,18 +47,27 @@ section:first-child{
         max-width: 65%;
         margin: 0 auto;
     }
+    #projects{
+        max-width: 80%;
+    }
+    #projects{
+        max-width: 90%;
+        overflow: visible;
+    }
 }
 @media(min-width:1200px){
     .section{
         max-width: 50%;
         margin: 0 auto;
     }
+    #projects{
+        max-width: 80%;
+    }
 }
 
 /* about section */
 .about-header{
     width: 10rem;
-    margin-top: 2.5em;
     border-bottom: 3px solid var(--main-color);
     border-left: 3px solid var(--main-color);
     padding-left: 10px;
@@ -82,7 +90,6 @@ section:first-child{
 /* projects section */
 .projects-header{
     width: 13rem;
-    margin-top: 2.5em;
     border-bottom: 3px solid var(--main-color);
     border-left: 3px solid var(--main-color);
     padding-left: 10px;

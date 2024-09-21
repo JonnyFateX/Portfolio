@@ -28,6 +28,9 @@
     --honeyColor: #14001a;
     --honeyBorderColor: #1b0023;
     --size: 120px;
+    /* article */
+    --article-background: #231926;
+    --article-link-background: #1a131d;
 }
 
 html{
