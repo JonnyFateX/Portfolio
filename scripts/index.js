@@ -23,20 +23,33 @@ menuListEl.addEventListener("click", (event) => {
     if(target.classList?.length && target.classList[0] === 'nav-link'){
         event.preventDefault()
         const id = target.getAttribute("href").replace("/#", "")
-        /*document.getElementById(id).scrollIntoView({
-            behavior: "smooth"
-
-        }) */
-        
         let headerOffset = document.getElementsByTagName("header")[0].offsetHeight;
         let sectionPosition = document.getElementById(id).offsetTop;
         var offsetPosition = sectionPosition - headerOffset - 16;
     
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-
+        if(id === "about"){
+            if(window.innerWidth >= 500){
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: "smooth"
+                })
+            }else{
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                })
+            } 
+        }else if(id === "contact"){
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: "smooth"
+            })
+        }else{
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            })
+        }
     }
     if(window.innerWidth < 751){
         menuListEl.style.opacity = '0'

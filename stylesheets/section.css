@@ -49,6 +49,12 @@ section:first-child{
 }
 
 /* contact section */
+#contact{
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .contact-header{
     font-size: 2rem;
     font-weight: 300;
@@ -86,6 +92,26 @@ section:first-child{
     font-size: 1.15rem;
     transition: opacity 0.25s ease;
 }
+
+.contact-links{
+    display: flex;
+    margin: 1em auto 0;
+    gap: 2em;
+}
+
+.contact-link{
+    transition: transform 0.25s ease-out;
+}
+
+.contact-link:hover{
+    transform: scale(1.25);
+}
+
+.github{
+    margin-top: 5px;
+}
+
+
 
 @media(max-width:1000px){
     .contact-email{
@@ -125,6 +151,11 @@ section:first-child{
     display: flex;
     flex-direction: column;
     padding: 0;
+}
+@media(min-width:500px){
+    #about{
+        justify-content: center;
+    }
 }
 @media(min-width:600px){
     .section{

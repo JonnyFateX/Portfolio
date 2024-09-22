@@ -23,7 +23,8 @@ emailEl.addEventListener("mouseout", () => {
     document.onmousemove = null
 })
 
-emailEl.addEventListener("click", (event) => {
+emailEl.addEventListener("mouseup", (event) => {
+    if(window.innerWidth < 1000) return
     navigator.clipboard.writeText(event.target.innerText);
     clipboardEl.innerText = "Copied!"
 
