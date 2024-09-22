@@ -35,15 +35,17 @@ nav{
     backdrop-filter: blur(12px);
     opacity: 0;
     transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    -webkit-transition: opacity 0.25s ease;
 }
 
 #menu-list > li{
-    opacity: 1;
-    /*opacity: 0;*/
-    /*animation: fade-in 0.5s ease-in forwards 7.6s;
+    opacity: 0;
+    animation: fade-in 0.5s ease-in forwards 7.6s;
     -webkit-animation: fade-in 0.5s ease-in forwards 7.6s;
     -o-animation: fade-in 0.5s ease-in forwards 7.6s;
-    -moz-animation: fade-in 0.5s ease-in forwards 7.6s;*/
+    -moz-animation: fade-in 0.5s ease-in forwards 7.6s;
 }
 
 .nav-logo{
@@ -53,10 +55,10 @@ nav{
 .nav-logo:after{
     content:"./jonathanmtzc.dev";
     font-size: 32px;
-    /*animation: text-fade-in 8s forwards;
+    animation: text-fade-in 8s forwards;
     -webkit-animation: text-fade-in 8s forwards;
     -o-animation: text-fade-in 8s forwards;
-    -moz-animation: text-fade-in 8s forwards;*/
+    -moz-animation: text-fade-in 8s forwards;
 }
 
 #menu-button{
@@ -85,6 +87,9 @@ nav{
         backdrop-filter: unset;
         opacity: 1;
         transition: unset;
+        -moz-transition: unset;
+        -o-transition: unset;
+        -webkit-transition: unset;
     }
 
     #menu-list > li > a{

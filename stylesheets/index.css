@@ -47,7 +47,6 @@ header{
 }
 
 body{
-    /* background-color: var(--background-color); */
     background:
         radial-gradient(circle farthest-side at 0% 50%, var(--honeyColor) 23.5%,transparent 0)calc(var(--size)*0.7) var(--size),
         radial-gradient(circle farthest-side at 0% 50%,var(--honeyBorderColor) 24%,transparent 0)calc(var(--size)*19/30) var(--size),
@@ -55,7 +54,7 @@ body{
         linear-gradient(150deg, var(--honeyColor) 24%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 26%,transparent 0,transparent 74%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 76%, var(--honeyColor) 0)0 0,
         linear-gradient(30deg, var(--honeyColor) 24%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 26%,transparent 0,transparent 74%,var(--honeyBorderColor) 0,var(--honeyBorderColor) 76%, var(--honeyColor) 0)0 0,
         linear-gradient(90deg,var(--honeyBorderColor) 2%, var(--honeyColor) 0, var(--honeyColor) 98%,var(--honeyBorderColor) 0%)0 0 var(--honeyColor);
-        background-size:calc(var(--size)*4/3) calc(var(--size)*2);
+    background-size:calc(var(--size)*4/3) calc(var(--size)*2);
     overflow: auto;
 }
 
@@ -79,10 +78,9 @@ a, a:visited, a:active{
     text-decoration-color: transparent;
     color: var(--main-color);
     transition: text-decoration-color 0.25s ease;
-}
-
-a:hover{
-    text-decoration-color:  var(--main-color);
+    -moz-transition: text-decoration-color 0.25s ease;
+    -o-transition: text-decoration-color 0.25s ease;
+    -webkit-transition: text-decoration-color 0.25s ease;
 }
 
 h1{
@@ -117,6 +115,9 @@ p{
     border-radius: 50%;
     outline: 6px solid transparent;
     transition: outline-color 0.5s ease, transform 4s ease-in-out;
+    -moz-transition: outline-color 0.5s ease, transform 4s ease-in-out;
+    -o-transition: outline-color 0.5s ease, transform 4s ease-in-out;
+    -webkit-transition: outline-color 0.5s ease, transform 4s ease-in-out;
     cursor: pointer;
 }
 
@@ -125,10 +126,6 @@ p{
         height: 400px;
         width: 400px;
     }
-}
-
-.pfp:hover{
-    outline-color: var(--outline-color);
 }
 
 .spin{
@@ -147,4 +144,13 @@ p{
     -o-animation: pulse 5s ease infinite;
     -moz-animation: pulse 5s ease infinite;
     margin-right: 8px;
+}
+
+@media (hover: hover){  
+    a:hover{
+        text-decoration-color:  var(--main-color);
+    }
+    .pfp:hover{
+        outline-color: var(--outline-color);
+    }
 }

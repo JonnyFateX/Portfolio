@@ -91,6 +91,9 @@ section:first-child{
     background-color: var(--article-background);
     font-size: 1.15rem;
     transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    -webkit-transition: opacity 0.25s ease;
 }
 
 .contact-links{
@@ -100,11 +103,16 @@ section:first-child{
 }
 
 .contact-link{
-    transition: transform 0.25s ease-out;
+    transition: transform 0.25s ease;
+    -moz-transition: transform 0.25s ease;
+    -o-transition: transform 0.25s ease;
+    -webkit-transition: transform 0.25s ease;
 }
 
-.contact-link:hover{
-    transform: scale(1.25);
+@media(hover: hover){
+    .contact-link:hover{
+        transform: scale(1.25);
+    }
 }
 
 .github{
