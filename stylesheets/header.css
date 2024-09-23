@@ -58,6 +58,9 @@ nav{
     -webkit-animation: var(--logo-animation);
     -o-animation: var(--logo-animation);
     -moz-animation: var(--logo-animation);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu-button{

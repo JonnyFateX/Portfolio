@@ -35,248 +35,199 @@
 /* title animation */
 @keyframes text-fade-in{
     0%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./|";
     }
     4%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./j|";
     }
     8%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jo|";
     }
     12%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jon|";
     }
     16%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jona|";
     }
     20%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonat|";
     }
     24%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonath|";
     }
     28%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonatha|";
     }
     32%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathan|";
     }
     36%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanm|";
     }
     40%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmt|";
     }
     44%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmtz|";
     }
     48%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmtzc|";
     }
     52%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmtzc.|";
     }
     70%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmtzc.dev|";
     }
     71%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         content: "./jonathanmtzc.dev";
         opacity: 1;
     }
     80%{
-        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         opacity: 1;
         content: "./jonathanmtzc.dev";
     }
     92%{
-        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 2rem;
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color:  var(--background-color);
         opacity: 0;
         content: "./jonathanmtzc.dev";
     }
     96%{
+        display: block;
         opacity: 0;
         content: "./jonathanmtzc.dev";
     }
     100%{
+        display: block;
         opacity: 1;
         font-size: 28px;
         content: "./jonathanmtzc.dev";
