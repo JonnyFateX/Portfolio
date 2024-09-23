@@ -68,6 +68,11 @@ nav{
     z-index: 11;
     border: 1px solid transparent;
     padding-top: 5px;
+    opacity: var(--li-opacity);
+    animation: var(--li-animation);
+    -webkit-animation: var(--li-animation);
+    -o-animation: var(--li-animation);
+    -moz-animation: var(--li-animation);
 }
 
 @media(min-width:750px){

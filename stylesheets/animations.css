@@ -316,7 +316,7 @@
 
 @-webkit-keyframes text-fade-in{
     0%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -328,7 +328,7 @@
         content: "./|";
     }
     4%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -340,7 +340,7 @@
         content: "./j|";
     }
     8%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -352,7 +352,7 @@
         content: "./jo|";
     }
     12%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -364,7 +364,7 @@
         content: "./jon|";
     }
     16%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -376,7 +376,7 @@
         content: "./jona|";
     }
     20%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -388,7 +388,7 @@
         content: "./jonat|";
     }
     24%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -400,7 +400,7 @@
         content: "./jonath|";
     }
     28%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -412,7 +412,7 @@
         content: "./jonatha|";
     }
     32%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -424,7 +424,7 @@
         content: "./jonathan|";
     }
     36%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -436,7 +436,7 @@
         content: "./jonathanm|";
     }
     40%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -448,7 +448,7 @@
         content: "./jonathanmt|";
     }
     44%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -460,7 +460,7 @@
         content: "./jonathanmtz|";
     }
     48%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -472,7 +472,7 @@
         content: "./jonathanmtzc|";
     }
     52%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -484,7 +484,7 @@
         content: "./jonathanmtzc.|";
     }
     70%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -496,7 +496,7 @@
         content: "./jonathanmtzc.dev|";
     }
     71%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -509,7 +509,7 @@
         opacity: 1;
     }
     80%{
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
@@ -523,7 +523,7 @@
     }
     92%{
         font-size: 2rem;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         position: fixed;
         top: 0;
