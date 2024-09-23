@@ -35,6 +35,7 @@
 /* title animation */
 @keyframes text-fade-in{
     0%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -47,6 +48,7 @@
         content: "./|";
     }
     4%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -59,6 +61,7 @@
         content: "./j|";
     }
     8%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -71,6 +74,7 @@
         content: "./jo|";
     }
     12%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -83,6 +87,7 @@
         content: "./jon|";
     }
     16%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -95,6 +100,7 @@
         content: "./jona|";
     }
     20%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -107,6 +113,7 @@
         content: "./jonat|";
     }
     24%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -119,6 +126,7 @@
         content: "./jonath|";
     }
     28%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -131,6 +139,7 @@
         content: "./jonatha|";
     }
     32%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -143,6 +152,7 @@
         content: "./jonathan|";
     }
     36%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -155,6 +165,7 @@
         content: "./jonathanm|";
     }
     40%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -167,6 +178,7 @@
         content: "./jonathanmt|";
     }
     44%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -179,6 +191,7 @@
         content: "./jonathanmtz|";
     }
     48%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -191,6 +204,7 @@
         content: "./jonathanmtzc|";
     }
     52%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -203,6 +217,7 @@
         content: "./jonathanmtzc.|";
     }
     70%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -215,6 +230,7 @@
         content: "./jonathanmtzc.dev|";
     }
     71%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -228,6 +244,7 @@
         opacity: 1;
     }
     80%{
+        margin: auto;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -241,6 +258,7 @@
         content: "./jonathanmtzc.dev";
     }
     92%{
+        margin: auto;
         font-size: 2rem;
         width: 100%;
         height: 100%;
