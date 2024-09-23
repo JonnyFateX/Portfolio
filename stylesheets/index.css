@@ -58,6 +58,10 @@ body{
     overflow: auto;
 }
 
+main{
+    overflow-y: hidden;
+}
+
 /* elements */
 h1, h2, h3, h4, p, span{
     color: var(--text-color);

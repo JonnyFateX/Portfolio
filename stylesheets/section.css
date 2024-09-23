@@ -74,6 +74,7 @@ section:first-child{
     color: var(--main-color);
     font-size: 4.25rem;
     font-weight: 300;
+    position: relative;
 }
 
 .contact-mobile{
@@ -81,8 +82,7 @@ section:first-child{
 }
 
 #clipboard{
-    position: fixed;
-    display: inline-block;
+    position: absolute;
     visibility: hidden;
     opacity: 0;
     padding: 0.5em 0.65em;
@@ -94,6 +94,7 @@ section:first-child{
     -moz-transition: opacity 0.25s ease;
     -o-transition: opacity 0.25s ease;
     -webkit-transition: opacity 0.25s ease;
+    white-space: nowrap;
 }
 
 .contact-links{
@@ -198,4 +199,18 @@ section:first-child{
     #contact{
         max-width: 90%;
     }
+}
+
+.section{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+    -webkit-transition: opacity 1s ease, transform 1s ease;
+    -moz-transition: opacity 1s ease, transform 1s ease;
+    -o-transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-visible{
+    opacity: 1;
+    transform: translateY(0);
 }

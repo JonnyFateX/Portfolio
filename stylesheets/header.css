@@ -55,10 +55,10 @@ nav{
 .nav-logo:after{
     content:"./jonathanmtzc.dev";
     font-size: 32px;
-    animation: text-fade-in 8s forwards;
+    /*animation: text-fade-in 8s forwards;
     -webkit-animation: text-fade-in 8s forwards;
     -o-animation: text-fade-in 8s forwards;
-    -moz-animation: text-fade-in 8s forwards;
+    -moz-animation: text-fade-in 8s forwards;*/
 }
 
 #menu-button{
