@@ -40,25 +40,22 @@ nav{
     -webkit-transition: opacity 0.25s ease;
 }
 
-#menu-list > li{
-    opacity: 0;
-    animation: fade-in 0.5s ease-in forwards 7.6s;
-    -webkit-animation: fade-in 0.5s ease-in forwards 7.6s;
-    -o-animation: fade-in 0.5s ease-in forwards 7.6s;
-    -moz-animation: fade-in 0.5s ease-in forwards 7.6s;
-}
-
 .nav-logo{
     z-index: 11;
+}
+
+:root{
+    --logo-animation: text-fade-in 8s forwards;
+    --li-animation: fade-in 0.5s ease-in forwards 7.6s;
 }
 
 .nav-logo:after{
     content:"./jonathanmtzc.dev";
     font-size: 32px;
-    /*animation: text-fade-in 8s forwards;
-    -webkit-animation: text-fade-in 8s forwards;
-    -o-animation: text-fade-in 8s forwards;
-    -moz-animation: text-fade-in 8s forwards;*/
+    animation: var(--logo-animation);
+    -webkit-animation: var(--logo-animation);
+    -o-animation: var(--logo-animation);
+    -moz-animation: var(--logo-animation);
 }
 
 #menu-button{
@@ -102,5 +99,12 @@ nav{
 
     #menu-button{
         display: none;
+    }
+
+    #menu-list > li{
+        animation: var(--li-animation);
+        -webkit-animation: var(--li-animation);
+        -o-animation: var(--li-animation);
+        -moz-animation: var(--li-animation);
     }
 }

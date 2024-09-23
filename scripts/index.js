@@ -3,6 +3,12 @@ const menuButtonEl = document.getElementById("menu-button")
 const menuListEl = document.getElementById("menu-list")
 const mainLink = document.getElementsByClassName("nav-link")[0]
 
+const mainSectionElHeight = document.getElementById("main-section").offsetHeight
+if(window.scrollY > mainSectionElHeight){
+    document.documentElement.style.setProperty("--logo-animation", "unset");
+    document.documentElement.style.setProperty("--li-animation", "unset");
+}
+
 menuButtonEl.addEventListener("click", () => {
     if(menuListEl.style.display === "none" || !(menuListEl.style.display)){
         menuListEl.style.display = "flex"
