@@ -69,7 +69,6 @@ nav{
     background-color: transparent;
     cursor: pointer;
     z-index: 11;
-    border: 1px solid transparent;
     padding-top: 5px;
     opacity: var(--li-opacity);
     animation: var(--li-animation);

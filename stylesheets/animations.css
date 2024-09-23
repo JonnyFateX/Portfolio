@@ -222,12 +222,16 @@
         content: "./jonathanmtzc.dev";
     }
     96%{
-        display: block;
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
         opacity: 0;
         content: "./jonathanmtzc.dev";
     }
     100%{
-        display: block;
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
         opacity: 1;
         font-size: 28px;
         content: "./jonathanmtzc.dev";
