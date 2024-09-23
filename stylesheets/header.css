@@ -47,6 +47,7 @@ nav{
 :root{
     --logo-animation: text-fade-in 8s forwards;
     --li-animation: fade-in 0.5s ease-in forwards 7.6s;
+    --li-opacity: 0;
 }
 
 .nav-logo:after{
@@ -102,6 +103,7 @@ nav{
     }
 
     #menu-list > li{
+        opacity: var(--li-opacity);
         animation: var(--li-animation);
         -webkit-animation: var(--li-animation);
         -o-animation: var(--li-animation);

@@ -4,9 +4,10 @@ const menuListEl = document.getElementById("menu-list")
 const mainLink = document.getElementsByClassName("nav-link")[0]
 
 const mainSectionElHeight = document.getElementById("main-section").offsetHeight
-if(window.scrollY > mainSectionElHeight){
+if(window.scrollY > mainSectionElHeight/2){
     document.documentElement.style.setProperty("--logo-animation", "unset");
     document.documentElement.style.setProperty("--li-animation", "unset");
+    document.documentElement.style.setProperty("--li-opacity", "1");
 }
 
 menuButtonEl.addEventListener("click", () => {
