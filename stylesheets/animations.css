@@ -222,6 +222,9 @@
         content: "./jonathanmtzc.dev";
     }
     96%{
+        position: unset;
+        top: unset;
+        left: unset;
         display: flex;
         justify-content: unset;
         align-items: unset;
@@ -229,6 +232,9 @@
         content: "./jonathanmtzc.dev";
     }
     100%{
+        position: unset;
+        top: unset;
+        left: unset;
         display: flex;
         justify-content: unset;
         align-items: unset;
