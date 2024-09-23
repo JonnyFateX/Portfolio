@@ -81,7 +81,7 @@ section:first-child{
     display: none;
 }
 
-#clipboard{
+.clipboard{
     position: absolute;
     visibility: hidden;
     opacity: 0;
