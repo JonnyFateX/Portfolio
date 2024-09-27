@@ -10,22 +10,6 @@ if(window.scrollY > mainSectionElHeight/2){
     document.documentElement.style.setProperty("--li-opacity", "1");
 }
 
-if(window.innerHeight < 750){
-    menuListEl.style.height = window.innerHeight + "px"
-}else{
-    menuListEl.style.height = "unset"
-}
-
-window.addEventListener("resize", () => {
-    if(window.innerHeight < 750){
-        menuListEl.style.height = window.innerHeight + "px"
-    }else{
-        if(window.innerHeight < 750){
-            menuListEl.style.height = "unset"
-        }
-    }
-})
-
 menuButtonEl.addEventListener("click", () => {
     if(menuListEl.style.display === "none" || !(menuListEl.style.display)){
         menuListEl.style.display = "flex"
